@@ -1,0 +1,8 @@
+<h2>Available Parking Spaces</h2>
+<ul>
+    {% for p in parkings %}
+        <li>{{ p.title }} - {{ p.location }} - 
+            {% if p.is_free %} Free {% else %} ₹{{ p.price_per_hour }}/hr {% endif %}
+        </li>
+    {% endfor %}
+</ul>
